@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify – Web Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <a href="#" class="logo">
+        <svg viewBox="0 0 1134 340"><path d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-37-147-43-8-1-15 5-16 12s5 15 12 16c54 5 99 17 133 38 7 4 16 2 20-5s2-16-5-20zm17-45c-45-28-114-44-167-48-9-1-17 6-18 15s6 17 15 18c47 4 108 18 148 43 8 5 18 2 23-6s2-18-6-23zm2-47C204 128 118 112 68 103c-11-2-21 5-23 16s5 21 16 23c46 9 124 23 173 44 9 4 20 0 24-10s0-20-10-24z"/></svg>
+        <span>Spotify</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#" class="active">
+          <svg viewBox="0 0 24 24"><path d="M13.5 1.515a3 3 0 00-3 0L3 5.845a2 2 0 00-1 1.732V21a1 1 0 001 1h6a1 1 0 001-1v-6h4v6a1 1 0 001 1h6a1 1 0 001-1V7.577a2 2 0 00-1-1.732l-7.5-4.33z"/></svg>
+          <span>Home</span>
+        </a></li>
+        <li><a href="#">
+          <svg viewBox="0 0 24 24"><path d="M10.533 1.279C5.35 1.279 1.126 5.419 1.126 10.558s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 001.414-1.414l-4.344-4.344a9.21 9.21 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.367 9.28a7.367 7.367 0 1114.734 0 7.367 7.367 0 01-14.734 0z"/></svg>
+          <span>Search</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section library">
+      <div class="lib-header">
+        <div class="lib-title">
+          <svg viewBox="0 0 24 24"><path d="M3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zm12.5-19.866A1 1 0 0014 3v18a1 1 0 001 1h1a1 1 0 001-1V3a1 1 0 00-1.5-.866zM9 2a1 1 0 00-1 1v18a1 1 0 001 1h1a1 1 0 001-1V3a1 1 0 00-1-1H9z"/></svg>
+          <span>Your Library</span>
+        </div>
+        <button class="add-btn" title="Create playlist">+</button>
+      </div>
+      <div class="pills">
+        <button class="pill active">Playlists</button>
+        <button class="pill">Artists</button>
+        <button class="pill">Albums</button>
+      </div>
+      <div class="lib-list">
+        <div class="lib-item">
+          <img src="assets/images/album_1.png" alt="">
+          <div><div class="name">Liked Songs</div><div class="meta">Playlist · 247 songs</div></div>
+        </div>
+        <div class="lib-item">
+          <img src="assets/images/album_2.png" alt="">
+          <div><div class="name">Daily Mix 1</div><div class="meta">Playlist · Spotify</div></div>
+        </div>
+        <div class="lib-item">
+          <img src="assets/images/album_3.png" alt="">
+          <div><div class="name">Chill Vibes</div><div class="meta">Playlist · 83 songs</div></div>
+        </div>
+        <div class="lib-item">
+          <img src="assets/images/album_4.png" alt="" class="round">
+          <div><div class="name">The Weeknd</div><div class="meta">Artist</div></div>
+        </div>
+        <div class="lib-item">
+          <img src="assets/images/album_5.png" alt="">
+          <div><div class="name">Discover Weekly</div><div class="meta">Playlist · Spotify</div></div>
+        </div>
+        <div class="lib-item">
+          <img src="assets/images/album_6.png" alt="" class="round">
+          <div><div class="name">Drake</div><div class="meta">Artist</div></div>
+        </div>
+        <div class="lib-item">
+          <img src="assets/images/album_7.png" alt="">
+          <div><div class="name">Release Radar</div><div class="meta">Playlist · Spotify</div></div>
+        </div>
+        <div class="lib-item">
+          <img src="assets/images/album_8.png" alt="">
+          <div><div class="name">Workout Mix</div><div class="meta">Playlist · 62 songs</div></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-nav">
+        <button title="Go back">&#10094;</button>
+        <button title="Go forward">&#10095;</button>
+      </div>
+      <div class="topbar-actions">
+        <button class="upgrade-btn">Explore Premium</button>
+        <div class="avatar" title="Profile">Y</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <!-- Greeting + Quick Picks -->
+      <section class="greeting">
+        <h1>Good Evening</h1>
+        <div class="quick-grid">
+          <div class="quick-card">
+            <img src="assets/images/album_1.png" alt="">
+            <span class="qp-name">Liked Songs</span>
+            <button class="qp-play">&#9654;</button>
+          </div>
+          <div class="quick-card">
+            <img src="assets/images/album_2.png" alt="">
+            <span class="qp-name">Daily Mix 1</span>
+            <button class="qp-play">&#9654;</button>
+          </div>
+          <div class="quick-card">
+            <img src="assets/images/album_3.png" alt="">
+            <span class="qp-name">Chill Vibes</span>
+            <button class="qp-play">&#9654;</button>
+          </div>
+          <div class="quick-card">
+            <img src="assets/images/album_5.png" alt="">
+            <span class="qp-name">Discover Weekly</span>
+            <button class="qp-play">&#9654;</button>
+          </div>
+          <div class="quick-card">
+            <img src="assets/images/album_7.png" alt="">
+            <span class="qp-name">Release Radar</span>
+            <button class="qp-play">&#9654;</button>
+          </div>
+          <div class="quick-card">
+            <img src="assets/images/album_8.png" alt="">
+            <span class="qp-name">Workout Mix</span>
+            <button class="qp-play">&#9654;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Made For You -->
+      <section>
+        <div class="section-head">
+          <h2>Made For You</h2>
+          <a href="#">Show all</a>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_2.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Daily Mix 1</div>
+            <div class="card-sub">The Weeknd, Doja Cat, Post Malone and more</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_5.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Daily Mix 2</div>
+            <div class="card-sub">Billie Eilish, Lana Del Rey, Arctic Monkeys</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_8.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Discover Weekly</div>
+            <div class="card-sub">Your weekly mixtape of fresh music</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_7.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Release Radar</div>
+            <div class="card-sub">Catch all the latest music from artists you follow</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_1.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Repeat Rewind</div>
+            <div class="card-sub">Songs you've had on repeat</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recently Played -->
+      <section>
+        <div class="section-head">
+          <h2>Recently Played</h2>
+          <a href="#">Show all</a>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_3.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">After Hours</div>
+            <div class="card-sub">The Weeknd</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_4.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Starboy</div>
+            <div class="card-sub">The Weeknd</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_6.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Scorpion</div>
+            <div class="card-sub">Drake</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_1.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Future Nostalgia</div>
+            <div class="card-sub">Dua Lipa</div>
+          </div>
+          <div class="card">
+            <div class="card-img"><img src="assets/images/album_8.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Dawn FM</div>
+            <div class="card-sub">The Weeknd</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Artists -->
+      <section>
+        <div class="section-head">
+          <h2>Popular Artists</h2>
+          <a href="#">Show all</a>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-img round"><img src="assets/images/album_4.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">The Weeknd</div>
+            <div class="card-sub">Artist</div>
+          </div>
+          <div class="card">
+            <div class="card-img round"><img src="assets/images/album_6.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Drake</div>
+            <div class="card-sub">Artist</div>
+          </div>
+          <div class="card">
+            <div class="card-img round"><img src="assets/images/album_3.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Dua Lipa</div>
+            <div class="card-sub">Artist</div>
+          </div>
+          <div class="card">
+            <div class="card-img round"><img src="assets/images/album_5.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Billie Eilish</div>
+            <div class="card-sub">Artist</div>
+          </div>
+          <div class="card">
+            <div class="card-img round"><img src="assets/images/album_2.png" alt=""></div>
+            <button class="card-play">&#9654;</button>
+            <div class="card-title">Taylor Swift</div>
+            <div class="card-sub">Artist</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ═══ PLAYER BAR ═══ -->
+  <footer class="player">
+    <div class="pl-left">
+      <img src="assets/images/album_3.png" alt="">
+      <div class="pl-info">
+        <div class="pl-name">Blinding Lights</div>
+        <div class="pl-artist">The Weeknd</div>
+      </div>
+      <button class="like" title="Save to Liked Songs">&#9825;</button>
+    </div>
+    <div class="pl-center">
+      <div class="pl-controls">
+        <button title="Shuffle">&#8646;</button>
+        <button title="Previous">&#9198;</button>
+        <button class="pp" title="Play">&#9654;</button>
+        <button title="Next">&#9197;</button>
+        <button title="Repeat">&#8634;</button>
+      </div>
+      <div class="progress-row">
+        <span class="time">1:23</span>
+        <div class="bar"><div class="fill"></div></div>
+        <span class="time">3:50</span>
+      </div>
+    </div>
+    <div class="pl-right">
+      <button title="Lyrics">&#9835;</button>
+      <button title="Queue">&#9776;</button>
+      <div class="vol-wrap">
+        <button title="Volume">&#128266;</button>
+        <div class="vol-bar"><div class="vol-fill"></div></div>
+      </div>
+      <button title="Full screen">&#9974;</button>
+    </div>
+  </footer>
+
+</body>
+</html>
